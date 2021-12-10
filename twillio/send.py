@@ -16,3 +16,9 @@ def send_sms(to, message):
         body=message
     )
     print(message.sid)
+
+
+if __name__ == '__main__':
+    TO = '+19085241817'
+    BODY = 'Hello, this is a test message.'
+    send_sms(TO, BODY)
