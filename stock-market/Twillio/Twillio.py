@@ -2,9 +2,9 @@ from twilio.rest import Client
 from decouple import config
 
 
-FROM_NUMBER = config('T_TWILIO_NUMBER')
-ACCOUNT_SID = config('T_ACCOUNT_SID')
-AUTH_TOKEN = config('T_AUTH_TOKEN')
+# FROM_NUMBER = config('T_TWILIO_NUMBER')
+# ACCOUNT_SID = config('T_ACCOUNT_SID')
+# AUTH_TOKEN = config('T_AUTH_TOKEN')
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 

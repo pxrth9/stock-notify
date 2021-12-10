@@ -24,3 +24,7 @@ jobs:
     - name: Run File
       run: |
         python stock-market/test.py
+      env:
+        FROM_NUMBER : ${{ secrets.T_TWILIO_NUMBER }}
+        ACCOUNT_SID : ${{ secrets.T_ACCOUNT_SID }}
+        AUTH_TOKEN  : ${{ secrets.T_AUTH_TOKEN }}
