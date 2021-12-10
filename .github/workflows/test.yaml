@@ -11,14 +11,14 @@ jobs:
 
     steps:
     - name: checkout repo content
-            uses: actions/checkout@v2
-          - name: setup python
-            uses: actions/setup-python@v2
-            with:
-              python-version: 3.9.1 #install the python needed
-          - name: Install requirements
-            run: |
-              pip install -r requirements.txt
-          - name: Run File
-            run: |
-              python ./stock-market/test.py
+      uses: actions/checkout@v2
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9.1 #install the python needed
+    - name: Install requirements
+      run: |
+        pip install -r requirements.txt
+    - name: Run File
+      run: |
+        python ./stock-market/test.py
