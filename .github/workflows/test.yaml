@@ -24,7 +24,7 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest
+        python stock-market/test.py
         echo $T_ACCOUNT_SID
     env: 
       T_TWILIO_NUMBER : ${{ secrets.T_TWILIO_NUMBER }}
