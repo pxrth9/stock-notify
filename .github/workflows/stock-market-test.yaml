@@ -1,4 +1,4 @@
-name : Test
+name : This is a test workflow
 
 on: 
   schedule:
