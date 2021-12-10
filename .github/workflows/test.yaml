@@ -23,7 +23,8 @@ jobs:
         pip install -r requirements.txt
     - name: Run File
       run: |
-        python stock-market/test.py
         echo ${{ secrets.T_TWILIO_NUMBER }}
+        echo ${{ secrets.T_TWILIO_TOKEN }}
+        echo ${{ secrets.T_TWILIO_SID }}
         
 
