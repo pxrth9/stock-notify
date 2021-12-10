@@ -21,10 +21,15 @@ jobs:
     - name: Install requirements
       run: |
         pip install -r requirements.txt
-    - name: Run File
+
+    - name: Run tests
       run: |
-        echo "${{ secrets.T_TWILIO_NUMBER }}"
-        echo "${{ secrets.T_AUTH_TOKEN }}"
-        echo "${{ secrets.T_ACCOUNT_SID }}"
-        
+        python -m pytest
+        echo $T_ACCOUNT_SID
+    env: 
+      T_TWILIO_NUMBER : ${{ secrets.T_TWILIO_NUMBER }}
+      T_AUTH_TOKEN: ${{ secrets.T_AUTH_TOKEN }}
+      T_ACCOUNT_SID :  ${{ secrets.T_ACCOUNT_SID }}
+
+    
 
