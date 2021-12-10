@@ -1,0 +1,19 @@
+name : Market Close
+
+on: 
+  schedule:
+  # run every day at 9:30 am and 4:30 pm
+    - cron: "30 16 * * *"
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: setup python
+            uses: actions/setup-python@v2
+            with:
+              python-version: 3.8 
+          - name: execute py script 
+            run: |
+              python stock-market/market-close.py
